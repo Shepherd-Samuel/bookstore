@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "title": "The Narrow Gate",
+      "author": "Samuel Mutava",
+      "price": 150,
+      "img": "assets/narrow gate.png",
+      "pdf": "assets/books/narrow_gate.pdf"
+    },
+    {
+        "id": 2,
+        "title": "Potential and Purpose",
+        "author": "Samuel Mutava",
+        "price": 200,
+        "img": "assets/potential&purpose.jpg",
+        "pdf": "assets/books/potential_purpose.pdf"
+      },
+      {
+        "id": 3,
+        "title": "If It's Not Right, It's Not Righteous",
+        "author": "Samuel Mutava",
+        "price": 200,
+        "img": "assets/potential&purpose.jpg",
+        "pdf": "assets/books/if_its_not_righteous.pdf"
+      },
+      {
+        "id": 4,
+        "title": "Beyond",
+        "author": "Samuel Mutava",
+        "price": 200,
+        "img": "assets/potential&purpose.jpg",
+        "pdf": "assets/books/beyond.pdf"
+      },
+    {
+      "id": 5,
+      "title": "A Way Out",
+      "author": "Samuel Mutava",
+      "price": 200,
+      "img": "assets/potential&purpose.jpg",
+      "pdf": "assets/books/way_out.pdf"
+    }
+  ]
+  
