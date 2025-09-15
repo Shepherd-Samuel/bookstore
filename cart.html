@@ -11,12 +11,7 @@
   <!-- Embedded CSS -->
   <style>
     body { background: #f8f9fa; font-family: Arial, sans-serif; }
-    nav { background: #212529; padding: 10px 20px; }
-    nav a { color: #fff; margin: 0 10px; text-decoration: none; font-weight: 500; }
-    nav a:hover { color: #ffc107; }
-    .brand { display: flex; align-items: center; }
-    .brand img { height: 45px; margin-right: 10px; }
-    .brand h1 { font-size: 1.5rem; margin: 0; color: #fff; }
+    .navbar-brand img { height: 40px; margin-right: 10px; }
     h2 { text-align: center; margin: 20px 0; font-weight: bold; }
     .cart-container { max-width: 800px; margin: auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
     .cart-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #ddd; }
@@ -30,22 +25,28 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <nav class="d-flex justify-content-between align-items-center">
-      <div class="brand">
+  <!-- Bootstrap Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="assets/logo.png" alt="Elite Bookstore Logo">
-        <h1>Elite Bookstore</h1>
+        Elite Bookstore
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link active" href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
       </div>
-      <div>
-        <a href="index.html">Home</a>
-        <a href="shop.html">Shop</a>
-        <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
   <!-- Cart Section -->
   <section>
