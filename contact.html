@@ -14,10 +14,11 @@
   <style>
     body { background: #f8f9fa; font-family: Arial, sans-serif; }
     nav { background: #212529; padding: 10px 20px; }
-    nav a { color: #fff; margin: 0 10px; text-decoration: none; }
+    nav a { color: #fff; margin: 0 10px; text-decoration: none; font-weight: 500; }
     nav a:hover { color: #ffc107; }
-    h1 { font-size: 1.5rem; margin: 0; display: flex; align-items: center; gap: 10px; }
-    h1 img { height: 40px; }
+    .brand { display: flex; align-items: center; }
+    .brand img { height: 45px; margin-right: 10px; }
+    .brand h1 { font-size: 1.5rem; margin: 0; color: #fff; }
     
     .contact { 
       max-width: 650px; 
@@ -46,10 +47,10 @@
   <!-- Header -->
   <header>
     <nav class="d-flex justify-content-between align-items-center">
-      <h1 class="text-white">
+      <div class="brand">
         <img src="assets/logo.png" alt="Elite Bookstore Logo">
-        Elite Bookstore
-      </h1>
+        <h1>Elite Bookstore</h1>
+      </div>
       <div>
         <a href="index.html">Home</a>
         <a href="shop.html">Shop</a>
@@ -84,7 +85,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 <? Date(Y) ?> Elite Bookstore | All Rights Reserved</p>
+    <p>&copy; 2025 Elite Bookstore | All Rights Reserved</p>
   </footer>
 
   <!-- JS -->
