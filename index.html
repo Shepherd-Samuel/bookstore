@@ -130,40 +130,8 @@
   <!-- Featured Books -->
   <section id="featured" class="container">
     <h2>Featured Books</h2>
-    <div class="row g-4 justify-content-center">
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <img src="assets/images/book1.jpg" class="card-img-top" alt="The Power of Purpose">
-          <div class="card-body">
-            <h5 class="card-title">The Power of Purpose</h5>
-            <p class="card-text">A guide to unlocking your full potential and finding meaning in life’s challenges.</p>
-            <p class="fw-bold">$12.99</p>
-            <button class="btn btn-dark w-100">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <img src="assets/images/book2.jpg" class="card-img-top" alt="Faith Over Fear">
-          <div class="card-body">
-            <h5 class="card-title">Faith Over Fear</h5>
-            <p class="card-text">An inspiring journey of courage, resilience, and the victory of faith over doubt.</p>
-            <p class="fw-bold">$15.50</p>
-            <button class="btn btn-dark w-100">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <img src="assets/images/book3.jpg" class="card-img-top" alt="Wisdom for Today">
-          <div class="card-body">
-            <h5 class="card-title">Wisdom for Today</h5>
-            <p class="card-text">A collection of timeless insights to guide your daily decisions and relationships.</p>
-            <p class="fw-bold">$9.75</p>
-            <button class="btn btn-dark w-100">Add to Cart</button>
-          </div>
-        </div>
-      </div>
+    <div id="featured-books" class="row g-4 justify-content-center">
+      <!-- ✅ Books from app.js will load here -->
     </div>
   </section>
 
@@ -202,5 +170,27 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="app.js"></script>
+
+  <script>
+    // Show only first 3 books on homepage
+    function renderBooks() {
+      const featuredContainer = document.getElementById("featured-books");
+      if (!featuredContainer) return;
+
+      featuredContainer.innerHTML = books.slice(0, 3).map(book => `
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="${book.img}" class="card-img-top" alt="${book.title}">
+            <div class="card-body">
+              <h5 class="card-title">${book.title}</h5>
+              <p class="card-text">${book.author}</p>
+              <p class="fw-bold">Ksh ${book.price}</p>
+              <button class="btn btn-dark w-100" onclick="addToCart(${book.id})">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      `).join("");
+    }
+  </script>
 </body>
 </html>
