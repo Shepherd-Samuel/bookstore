@@ -18,20 +18,6 @@
       padding: 0;
     }
 
-    /* Navbar */
-    nav {
-      background: #212529;
-      padding: 10px 20px;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    nav a:hover {
-      color: #ffc107;
-    }
     .navbar-brand img { height: 40px; margin-right: 10px; }
 
     /* Hero Section */
@@ -73,50 +59,9 @@
       margin-bottom: 30px;
       font-weight: bold;
     }
-    .book-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-    .book {
-      background: white;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
-    .book:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-    }
-    .book img {
-      width: 100%;
+    .card img {
       height: 250px;
       object-fit: cover;
-      border-radius: 10px;
-    }
-    .book h3 {
-      font-size: 1.1rem;
-      margin: 10px 0 5px;
-    }
-    .book p {
-      margin: 0;
-      font-size: 0.9rem;
-      font-weight: bold;
-    }
-    .book button {
-      margin-top: 10px;
-      background: #212529;
-      color: white;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .book button:hover {
-      background: #ffc107;
-      color: #000;
     }
 
     /* Categories */
@@ -152,51 +97,72 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <nav class="d-flex justify-content-between align-items-center">
-      <a href="index.html" class="navbar-brand d-flex align-items-center text-white">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="assets/logo.png" alt="Elite Bookstore Logo">
-        <span>Elite Bookstore</span>
+        Elite Bookstore
       </a>
-      <div>
-        <a href="index.html">Home</a>
-        <a href="shop.html">Shop</a>
-        <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
   <!-- Hero Section -->
   <section class="hero">
     <h2>Discover Your Next Favorite Book</h2>
-    <p>Browse thousands of titles and order today</p>
+    <p>Explore inspiring stories, powerful lessons, and timeless wisdom.</p>
     <a href="shop.html" class="btn">Shop Now</a>
   </section>
 
   <!-- Featured Books -->
-  <section id="featured">
+  <section id="featured" class="container">
     <h2>Featured Books</h2>
-    <div class="book-grid" id="featured-books">
-      <div class="book">
-        <img src="assets/images/book1.jpg" alt="Book 1">
-        <h3>The Power of Purpose</h3>
-        <p>$12.99</p>
-        <button>Add to Cart</button>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/images/book1.jpg" class="card-img-top" alt="The Power of Purpose">
+          <div class="card-body">
+            <h5 class="card-title">The Power of Purpose</h5>
+            <p class="card-text">A guide to unlocking your full potential and finding meaning in life’s challenges.</p>
+            <p class="fw-bold">$12.99</p>
+            <button class="btn btn-dark w-100">Add to Cart</button>
+          </div>
+        </div>
       </div>
-      <div class="book">
-        <img src="assets/images/book2.jpg" alt="Book 2">
-        <h3>Faith Over Fear</h3>
-        <p>$15.50</p>
-        <button>Add to Cart</button>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/images/book2.jpg" class="card-img-top" alt="Faith Over Fear">
+          <div class="card-body">
+            <h5 class="card-title">Faith Over Fear</h5>
+            <p class="card-text">An inspiring journey of courage, resilience, and the victory of faith over doubt.</p>
+            <p class="fw-bold">$15.50</p>
+            <button class="btn btn-dark w-100">Add to Cart</button>
+          </div>
+        </div>
       </div>
-      <div class="book">
-        <img src="assets/images/book3.jpg" alt="Book 3">
-        <h3>Wisdom for Today</h3>
-        <p>$9.75</p>
-        <button>Add to Cart</button>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/images/book3.jpg" class="card-img-top" alt="Wisdom for Today">
+          <div class="card-body">
+            <h5 class="card-title">Wisdom for Today</h5>
+            <p class="card-text">A collection of timeless insights to guide your daily decisions and relationships.</p>
+            <p class="fw-bold">$9.75</p>
+            <button class="btn btn-dark w-100">Add to Cart</button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -234,6 +200,7 @@
     <p>&copy; 2025 Elite Bookstore | All Rights Reserved</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
