@@ -12,9 +12,6 @@
   <!-- Embedded CSS -->
   <style>
     body { background: #f8f9fa; font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
-    nav { background: #212529; padding: 10px 20px; }
-    nav a { color: #fff; margin: 0 10px; text-decoration: none; font-weight: 500; }
-    nav a:hover { color: #ffc107; }
     .navbar-brand img { height: 40px; margin-right: 10px; }
 
     /* Hero Banner */
@@ -48,22 +45,28 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <nav class="d-flex justify-content-between align-items-center">
-      <a href="index.html" class="navbar-brand d-flex align-items-center text-white">
+  <!-- Bootstrap Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="assets/logo.png" alt="Elite Bookstore Logo">
-        <span>Elite Bookstore</span>
+        Elite Bookstore
       </a>
-      <div>
-        <a href="index.html">Home</a>
-        <a href="shop.html">Shop</a>
-        <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -113,6 +116,8 @@
     <p>&copy; 2025 Elite Bookstore | All Rights Reserved</p>
   </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
