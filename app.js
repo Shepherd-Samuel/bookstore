@@ -1,10 +1,10 @@
 // Local book data (images + prices stay here, pdfs will be merged from books.json)
 let books = [
-  { id: 1, title: "The Narrow Gate", author: "Samuel Mutava", price: 150, img: "assets/narrow gate.png" },
-  { id: 2, title: "Potential and Purpose", author: "Samuel Mutava", price: 200, img: "assets/potential&purpose.jpg" },
-  { id: 3, title: "If It's Not Right, It's Not Righteous", author: "Samuel Mutava", price: 10, img: "assets/not_right.jpg" },
-  { id: 4, title: "Beyond", author: "Samuel Mutava", price: 300, img: "assets/beyond.jpg" },
-  { id: 5, title: "A Way Out", author: "Samuel Mutava", price: 1, img: "assets/way_out.jpg" },
+  { id: 1, title: "The Narrow Gate", author: "Samuel Mutava", price: 110, img: "assets/narrow gate.png" },
+  { id: 2, title: "Potential and Purpose", author: "Samuel Mutava", price: 150, img: "assets/potential&purpose.jpg" },
+  { id: 3, title: "If It's Not Right, It's Not Righteous", author: "Samuel Mutava", price: 100, img: "assets/not_right.jpg" },
+  { id: 4, title: "Beyond", author: "Samuel Mutava", price: 200, img: "assets/beyond.jpg" },
+  { id: 5, title: "A Way Out", author: "Samuel Mutava", price: 100, img: "assets/way_out.jpg" },
   { id: 6, title: "Faith Over Excuses", author: "Samuel Mutava", price: 108, img: "assets/book3.jpg" }
 ];
 
@@ -93,3 +93,4 @@ function completePurchase() {
 
 // Initialize
 updateCartCount();
+
