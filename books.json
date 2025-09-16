@@ -13,7 +13,7 @@
         "author": "Samuel Mutava",
         "price": 200,
         "img": "assets/potential&purpose.jpg",
-        "pdf": "assets/books/potential_purpose.pdf"
+        "pdf": "assets/books/potential&purpose.pdf"
       },
       {
         "id": 3,
@@ -40,4 +40,5 @@
       "pdf": "assets/books/way_out.pdf"
     }
   ]
+
   
