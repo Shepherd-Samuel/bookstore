@@ -3,35 +3,47 @@
   
   <!-- Homepage -->
   <url>
-    <loc>https://yourusername.github.io/index.html</loc>
+    <loc>https://www.shepherdsam.store/</loc>
     <lastmod>2025-09-16</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Services -->
+  <!-- Services (if active) -->
   <url>
-    <loc>https://yourusername.github.io/services.html</loc>
+    <loc>https://www.shepherdsam.store/services.html</loc>
     <lastmod>2025-09-16</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Articles -->
+  <!-- Books page (main catalog) -->
   <url>
-    <loc>https://yourusername.github.io/articles.html</loc>
+    <loc>https://www.shepherdsam.store/books.html</loc>
     <lastmod>2025-09-16</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Contact -->
+  <!-- Individual books -->
   <url>
-    <loc>https://yourusername.github.io/contact.html</loc>
+    <loc>https://www.shepherdsam.store/books.html#potential-and-purpose</loc>
     <lastmod>2025-09-16</lastmod>
-    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.shepherdsam.store/books.html#beyond</loc>
+    <lastmod>2025-09-16</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.shepherdsam.store/books.html#a-way-out</loc>
+    <lastmod>2025-09-16</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Contact page -->
+  <url>
+    <loc>https://www.shepherdsam.store/contact.html</loc>
+    <lastmod>2025-09-16</lastmod>
     <priority>0.7</priority>
   </url>
 
 </urlset>
-
