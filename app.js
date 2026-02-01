@@ -6,6 +6,7 @@ let books = [
   { id: 4, title: "Beyond", author: "Samuel Mutava", price: 200, img: "assets/beyond.jpg" },
   { id: 5, title: "A Way Out", author: "Samuel Mutava", price: 100, img: "assets/way_out.jpg" },
   { id: 6, title: "Beyond The Grade", author: "Samuel Mutava", price: 50, img: "assets/beyond.png" }
+  { id: 7, title: "AI in Coding", author: "Samuel Mutava", price: 100, img: "assets/coding.jpeg" }
 ];
 
 // Cart from localStorage
@@ -93,5 +94,6 @@ function completePurchase() {
 
 // Initialize
 updateCartCount();
+
 
 
