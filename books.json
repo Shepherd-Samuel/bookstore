@@ -32,7 +32,7 @@
         "pdf": "assets/books/beyond.pdf"
       },
     {
-        "id": 5,
+        "id": 6,
         "title": "Beyond The Grade",
         "author": "Samuel Mutava",
         "price": 50,
@@ -40,7 +40,7 @@
         "pdf": "assets/books/BEYOND THE GRADE.pdf"
       },
     {
-      "id": 6,
+      "id": 5,
       "title": "A Way Out",
       "author": "Samuel Mutava",
       "price": 200,
@@ -58,5 +58,6 @@
   ]
 
   
+
 
 
