@@ -31,6 +31,14 @@
         "img": "assets/potential&purpose.jpg",
         "pdf": "assets/books/beyond.pdf"
       },
+     {
+      "id": 5,
+      "title": "A Way Out",
+      "author": "Samuel Mutava",
+      "price": 200,
+      "img": "assets/potential&purpose.jpg",
+      "pdf": "assets/books/way_out.pdf"
+    },
     {
         "id": 6,
         "title": "Beyond The Grade",
@@ -39,14 +47,6 @@
         "img": "assets/beyond.png",
         "pdf": "assets/books/BEYOND THE GRADE.pdf"
       },
-    {
-      "id": 5,
-      "title": "A Way Out",
-      "author": "Samuel Mutava",
-      "price": 200,
-      "img": "assets/potential&purpose.jpg",
-      "pdf": "assets/books/way_out.pdf"
-    },
     {
       "id": 7,
       "title": "AI in Coding",
@@ -58,6 +58,7 @@
   ]
 
   
+
 
 
 
