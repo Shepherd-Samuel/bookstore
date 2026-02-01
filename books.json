@@ -46,8 +46,17 @@
       "price": 200,
       "img": "assets/potential&purpose.jpg",
       "pdf": "assets/books/way_out.pdf"
+    },
+    {
+      "id": 7,
+      "title": "AI in Coding",
+      "author": "Samuel Mutava",
+      "price": 100,
+      "img": "assets/coding.jpeg",
+      "pdf": "assets/books/coding.pdf"
     }
   ]
 
   
+
 
