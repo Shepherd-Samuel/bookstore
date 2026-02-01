@@ -5,7 +5,7 @@ let books = [
   { id: 3, title: "If It's Not Right, It's Not Righteous", author: "Samuel Mutava", price: 100, img: "assets/not_right.jpg" },
   { id: 4, title: "Beyond", author: "Samuel Mutava", price: 200, img: "assets/beyond.jpg" },
   { id: 5, title: "A Way Out", author: "Samuel Mutava", price: 100, img: "assets/way_out.jpg" },
-  { id: 6, title: "Faith Over Excuses", author: "Samuel Mutava", price: 108, img: "assets/book3.jpg" }
+  { id: 6, title: "Beyond The Grade", author: "Samuel Mutava", price: 50, img: "assets/beyond.png" }
 ];
 
 // Cart from localStorage
@@ -93,4 +93,5 @@ function completePurchase() {
 
 // Initialize
 updateCartCount();
+
 
