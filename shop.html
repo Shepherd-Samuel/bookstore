@@ -90,17 +90,13 @@
 
   <style>
     body { background: #f8f9fa; font-family: Arial, sans-serif; }
-
     h2 { text-align: center; margin: 20px 0; font-weight: bold; }
-
-    /* Force 3 books per row */
     .book-grid { 
       display: grid; 
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
       gap: 20px; 
       padding: 20px; 
     }
-
     .book { 
       background: white; 
       padding: 15px; 
@@ -127,7 +123,6 @@
       cursor: pointer; 
     }
     .book button:hover { background: #ffc107; color: #000; }
-    
     footer { 
       background: #212529; 
       color: #fff; 
@@ -135,9 +130,41 @@
       padding: 15px; 
       margin-top: 40px; 
     }
+
+    /* Custom Centered Alert Overlay */
+    #custom-alert-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      padding: 20px;
+    }
+    .custom-alert-box {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    .custom-alert-box h4 { margin-bottom: 20px; font-weight: bold; }
+    .alert-btns { display: flex; gap: 10px; justify-content: center; margin-top: 20px; }
   </style>
 </head>
 <body>
+
+  <div id="custom-alert-overlay">
+    <div class="custom-alert-box">
+      <h4 id="alert-message">Message here</h4>
+      <div class="alert-btns" id="alert-actions">
+        </div>
+    </div>
+  </div>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
@@ -178,8 +205,11 @@
   <script src="app.js"></script>
   <script>
     const shopContainer = document.getElementById("shop-books");
-    
-    // Display Books
+    const alertOverlay = document.getElementById("custom-alert-overlay");
+    const alertMsg = document.getElementById("alert-message");
+    const alertActions = document.getElementById("alert-actions");
+
+    // Display Books using data from app.js
     if (shopContainer && typeof books !== 'undefined') {
       shopContainer.innerHTML = books.map(book => `
         <div class="book">
@@ -187,45 +217,54 @@
           <h3>${book.title}</h3>
           <p>${book.author}</p>
           <p>Ksh ${book.price}</p>
-          <button onclick="handleAddToCart(${book.id})">Add to Cart</button>
+          <button onclick="addToCart(${book.id})">Add to Cart</button>
         </div>
       `).join("");
     }
 
-    // New logic to prevent double entry and prompt for checkout
-    function handleAddToCart(bookId) {
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    function showAlert(message, type = 'info') {
+      alertMsg.innerText = message;
+      alertActions.innerHTML = '';
       
-      // Check if book is already in cart
-      const exists = cart.find(item => item.id === bookId);
-
-      if (exists) {
-        alert("This book is already in your cart.");
+      if (type === 'confirm') {
+        alertActions.innerHTML = `
+          <button class="btn btn-dark" onclick="closeAlert()">Shop More</button>
+          <button class="btn btn-warning" onclick="window.location.href='cart.html'">Checkout</button>
+        `;
       } else {
-        // Find the book details from your 'books' array (defined in app.js)
-        const bookToAdd = books.find(b => b.id === bookId);
-        if (bookToAdd) {
-          cart.push(bookToAdd);
-          localStorage.setItem("cart", JSON.stringify(cart));
-          
-          // Update navbar count
-          updateCartCount(cart.length);
+        alertActions.innerHTML = `<button class="btn btn-dark" onclick="closeAlert()">OK</button>`;
+      }
+      
+      alertOverlay.style.display = 'flex';
+    }
 
-          // Ask to proceed to checkout
-          if (confirm("Book added! Would you like to proceed to checkout?")) {
-            window.location.href = "cart.html";
-          }
+    function closeAlert() {
+      alertOverlay.style.display = 'none';
+    }
+
+    function addToCart(bookId) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const isAlreadyInCart = cart.some(item => item.id === bookId);
+
+      if (isAlreadyInCart) {
+        showAlert("This book is already in your cart.");
+      } else {
+        const bookData = books.find(b => b.id === bookId);
+        if (bookData) {
+          cart.push({ ...bookData, qty: 1 });
+          localStorage.setItem("cart", JSON.stringify(cart));
+          updateGlobalCartCount(cart.length);
+          showAlert("Book added! Ready to checkout?", 'confirm');
         }
       }
     }
 
-    function updateCartCount(count) {
+    function updateGlobalCartCount(count) {
       localStorage.setItem("cartCount", count);
       document.getElementById("cart-count").innerText = count;
     }
 
-    // Initial count display on page load
-    document.getElementById("cart-count").innerText = localStorage.getItem("cartCount") || 0;
+    document.getElementById("cart-count").innerText = (JSON.parse(localStorage.getItem("cart")) || []).length;
   </script>
 </body>
 </html>
