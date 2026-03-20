@@ -6,8 +6,8 @@ export const books: Book[] = [
     title: "The Narrow Gate",
     author: "Samuel Mutava",
     price: 110,
-    img: "/assets/narrow-gate.png",
-    pdf: "assets/books/narrow_gate.pdf",
+    img: "../../assets/narrow-gate.png",
+    pdf: "../../assets/books/narrow_gate.pdf",
     category: "Faith & Spirituality",
     description:
       "A powerful exploration of the spiritual journey toward righteousness. This book challenges readers to choose the less-traveled path of integrity, faith, and purpose — even when it's difficult. Through scripture-based insights and personal reflections, Samuel Mutava invites you to walk through the narrow gate that leads to life.",
