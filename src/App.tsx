@@ -40,7 +40,7 @@ const App = () => (
             </main>
             <Footer />
           </div>
-        </BrowserRouter>
+        <BrowserRouter basename="/egrade">
       </CartProvider>
     </TooltipProvider>
   </QueryClientProvider>
