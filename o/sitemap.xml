@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.shepherdsam.store/</loc>
+    <lastmod>2025-09-16</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Services (if active) -->
+  <url>
+    <loc>https://www.shepherdsam.store/services.html</loc>
+    <lastmod>2025-09-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Books page (main catalog) -->
+  <url>
+    <loc>https://www.shepherdsam.store/shop.html</loc>
+    <lastmod>2025-09-16</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Individual books -->
+  <url>
+    <loc>https://www.shepherdsam.store/shop.html#potential-and-purpose</loc>
+    <lastmod>2025-09-16</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.shepherdsam.store/shop.html#beyond</loc>
+    <lastmod>2025-09-16</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.shepherdsam.store/shop.html#a-way-out</loc>
+    <lastmod>2025-09-16</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Contact page -->
+  <url>
+    <loc>https://www.shepherdsam.store/contact.html</loc>
+    <lastmod>2025-09-16</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
+
