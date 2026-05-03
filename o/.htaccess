@@ -1,4 +1,0 @@
-<Files "daraja.js">
-    Order Allow,Deny
-    Deny from all
-</Files>

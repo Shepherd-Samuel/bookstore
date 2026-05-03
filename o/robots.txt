@@ -1,6 +1,0 @@
-# robots.txt for shepherdsam.store
-User-agent: *
-Allow: /
-
-# Sitemap reference
-Sitemap: https://www.shepherdsam.store/sitemap.xml
