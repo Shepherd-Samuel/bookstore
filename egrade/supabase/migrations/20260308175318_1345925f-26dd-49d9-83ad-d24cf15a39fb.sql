@@ -1,1 +1,0 @@
-ALTER TABLE public.parents ADD CONSTRAINT parents_email_school_id_unique UNIQUE (email, school_id);
